@@ -102,9 +102,6 @@ with open('C:/Users/Acer/Desktop/umls python/100notas/1134878',
   data = f.read().translate(trans)
   tokens = [ t.lower() for t in word_tokenize(data) ]
 
-from collections import Counter
-bow_simple = Counter(mrsty['STY'])
-# print(bow_simple.most_common(10))
 
 # Hago consultas en mrconso y mrsty para saber tipo semantico
 palabra, grupo = [], []
@@ -126,22 +123,12 @@ dicc['palabra'] = palabra
 dicc['grupo'] = grupo
 
 
+#%%
+ from collections import Counter
+# bow_simple = Counter(lower_tokens)
+# print(bow_simple.most_common(10))
 
+bow = Counter(mrsty['STY'])
+keys = list(bow.keys())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+cuis = Counter(mrsty['CUI'])
