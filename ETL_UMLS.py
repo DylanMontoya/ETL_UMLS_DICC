@@ -7,7 +7,7 @@ import pickle
 conn = mysql.connector.connect(user = 'root', 
                                     password = '', 
                                     host = 'localhost',
-                                    port = '3306',
+                port = '3306',
                                     db = 'snomed_spa')
 
 if conn:
@@ -124,7 +124,7 @@ dicc['grupo'] = grupo
 
 
 #%%
- from collections import Counter
+from collections import Counter
 # bow_simple = Counter(lower_tokens)
 # print(bow_simple.most_common(10))
 
