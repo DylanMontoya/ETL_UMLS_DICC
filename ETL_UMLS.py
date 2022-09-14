@@ -3,7 +3,6 @@ import pandas as pd
 import pickle
 
 #%% Conexion DataBase
-<<<<<<< HEAD
 
 conn = mysql.connector.connect(user = 'root', 
                                     password = '', 
@@ -220,7 +219,17 @@ def Load(new_mrconso, new_mrsty):
     Organizo tipos semanticos a utilizar
     """
     
-    semantic_type = ['anatomical structure', 'congenital abnormality', 'body system', 'body part, organ, or organ component', 'body location or region', 'body space or junction', 'body substance', 'finding', 'laboratory or test result', 'injury or poisoning', 'physiologic function', 'pathologic function', 'disease or syndrome', 'mental or behavioral dysfunction', 'health care activity', 'laboratory procedure', 'diagnostic procedure', 'therapeutic or preventive procedure', 'research activity', 'temporal concept', 'qualitative concept', 'quantitative concept', 'spatial concept', 'chemical', 'pharmacologic substance', 'biologically active substance', 'hazardous or poisonous substance', 'substance', 'sign or symptom', 'anatomical abnormality', 'antibiotic', 'clinical drug', 'organism function']
+    semantic_type = ['anatomical structure', 'congenital abnormality', 'body system', 
+                     'body part, organ, or organ component', 'body location or region', 
+                     'body space or junction', 'body substance', 'finding', 
+                     'laboratory or test result', 'injury or poisoning', 'physiologic function', 
+                     'pathologic function', 'disease or syndrome', 'mental or behavioral dysfunction', 
+                     'health care activity', 'laboratory procedure', 'diagnostic procedure', 
+                     'therapeutic or preventive procedure', 'research activity', 'temporal concept', 
+                     'qualitative concept', 'quantitative concept', 'spatial concept', 'chemical', 
+                     'pharmacologic substance', 'biologically active substance', 'hazardous or poisonous substance', 
+                     'substance', 'sign or symptom', 'anatomical abnormality', 'antibiotic', 'clinical drug', 
+                     'organism function']
 
     my_sty = pd.DataFrame()
 
