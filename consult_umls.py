@@ -85,5 +85,3 @@ def etiquetado(data):
         token += 1
     
     return arreglo
-
-

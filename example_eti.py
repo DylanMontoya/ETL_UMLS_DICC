@@ -1,21 +1,27 @@
 from consult_umls import *
 
 # PARA HACER PRUEBAS DE CONSULTA
-for i in range(len(my_vocabulary)):
-    if my_vocabulary['STR'].values[i] == 'grado iii':#'{}'.format(ngram_exam[j][0]):
-        #print(i)
-        #print(my_vocabulary.values[i])
-        print(my_vocabulary.values[i][1], '->', my_vocabulary.values[i][-1], '->', Etiqueta(i))
+def test_consult(word):
+    for i in range(len(my_vocabulary)):
+        if my_vocabulary['STR'].values[i] == word:#'{}'.format(ngram_exam[j][0]):
+            #print(i)
+            #print(my_vocabulary.values[i])
+            return print(my_vocabulary.values[i][1], '->', my_vocabulary.values[i][-1], '->', Etiqueta(i))
         
-
-
 #%% ETIQUETADO EHR
-a,b = 'áéíóúüñÁÉÍÓÚÜ','aeiouunAEIOUU'
-trans = str.maketrans(a,b)
-# example = 'sangrado vaginal sangre examen para dolor de cabeza analisis de embarazo utero contraido dolor de cabeza'
+def ehr_process(path):
+    
+    a,b = 'áéíóúüñÁÉÍÓÚÜ','aeiouunAEIOUU'
+    trans = str.maketrans(a,b)
+    # example = 'sangrado vaginal sangre examen para dolor de cabeza analisis de embarazo utero contraido dolor de cabeza'
 
-with open('C:/Users/Acer/Desktop/umls python/100 notas/1134878', encoding = 'utf-8') as f:
-    data = f.read().translate(trans)
+    with open(path, encoding = 'utf-8') as f:
+        data = f.read().translate(trans)
+        
+    return data
+
+data = ehr_process('C:/Users/Acer/Desktop/umls python/100 notas/1134979')
+
 
 A = etiquetado(data)
 
