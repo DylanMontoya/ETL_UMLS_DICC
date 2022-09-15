@@ -1,4 +1,4 @@
-# ** ETL_UMLS_DICC**
+# **ETL_UMLS_DICC**
 
 ## **MetamorphoSys UMLS**
 MetamorphoSys instala uno o varios de los orígenes de conocimiento de UMLS y le permite crear subconjuntos de Metathesaurus personalizados.
